@@ -1,45 +1,64 @@
-*,*::before,*::after{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-:root{
-    --main-color : #000;
-    --sec-color :  orange;
+
+:root {
+    --main-color: #000;
+    --sec-color: orange;
 }
-body{
-   margin: 0;
-   padding: 0;
+
+body {
+    margin: 0;
+    padding: 0;
 }
-.navBar{
+
+.navBar {
     background-color: var(--main-color);
 }
-.navBar h1{
+
+.navBar h1 {
     color: #fff;
 }
-a{
+
+a {
     text-decoration: none;
     color: #fff;
 }
-.navBar span,.active,.navBar a:hover{color: var(--sec-color);}
-.container{
+
+.navBar span,
+footer span,
+.active,
+.navBar a:hover {
+    color: var(--sec-color);
+}
+
+.container {
     width: 90%;
     margin: auto;
     overflow: hidden;
 }
-.navBar .container{
+
+.navBar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-ul{
+
+ul {
     display: flex;
+    gap: 1em;
+    padding: 0;
+    justify-content: center;
 }
-li{
+
+li {
     list-style: none;
-    margin-left: 3em;
     text-transform: capitalize;
 }
 
-#hero{
+#hero {
     background-color: var(--sec-color);
     height: 35em;
     text-align: center;
@@ -47,42 +66,83 @@ li{
     align-items: center;
     justify-content: center;
 }
-#hero h1{
+
+#hero h1 {
     font-size: 3em;
-    line-height: 0.5;
+    line-height: 1;
     text-transform: capitalize;
 }
-#hero p{
+
+#hero p {
     font-size: 20px;
     font-weight: 600;
     font-family: sans-serif;
 }
-#hero a{
+
+#hero a {
     padding: 1em;
     display: inline-block;
     background-color: var(--main-color);
-    
+
 }
-#hero a:hover{
-    opacity: .8;
-}
-#about{
+
+#about {
     margin-top: 2em;
 }
-#about .container{
+
+#hero a:hover {
+    opacity: .8;
+}
+
+#about .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
-.section-title{
+
+.section-title {
     color: var(--main-color);
     border-bottom: 1em;
 }
-.section-title h1{
-   display: inline-block;
-   padding-bottom: .2em;
-   border-bottom: 3px solid var(--sec-color);
-   font-size: 25px;
+
+.section-title h1 {
+    display: inline-block;
+    padding-bottom: .2em;
+    border-bottom: 3px solid var(--sec-color);
+    font-size: 25px;
 }
-#about img{
+
+#about p {
+    margin-right: 2em;
+}
+
+#about img {
     height: 30em;
+}
+
+footer {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 1em;
+}
+
+@media (max-width: 991px) {
+    .navBar .container {
+        display: block;
+        text-align: center;
+    }
+
+    .navBar h1 {
+        margin-bottom: 1em;
+    }
+
+    #hero h1 {
+        font-size: 25px;
+    }
+
+    #about .container {
+        display: block;
+    }
 }
