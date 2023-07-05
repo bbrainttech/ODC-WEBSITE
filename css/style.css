@@ -1,0 +1,40 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+:root{
+    --main-color : #000;
+    --sec-color :  orange;
+}
+body{
+   margin: 0;
+   padding: 0;
+}
+.navBar{
+    background-color: var(--main-color);
+}
+.navBar h1{
+    color: #fff;
+}
+.navBar span,.active,.navBar a:hover{color: var(--sec-color);}
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+.navBar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+    margin-left: 3em;
+    text-transform: capitalize;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
